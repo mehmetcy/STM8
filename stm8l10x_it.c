@@ -1,10 +1,10 @@
 /**
   ******************************************************************************
-  * @file    stm8l10x_it.c
-  * @author  MCD Application Team
-  * @version V1.2.1
-  * @date    30-September-2014
-  * @brief   This file contains all the interrupt routines.
+  * @file     Project/STM8L10x_StdPeriph_Templates/stm8l10x_it.c
+  * @author   MCD Application Team
+  * @version  V1.2.1
+  * @date     30-September-2014
+  * @brief    This file contains all the interrupt routines.
   ******************************************************************************
   * @attention
   *
@@ -28,6 +28,10 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm8l10x_it.h"
 
+/** @addtogroup STM8L10x_StdPeriph_Templates
+  * @{
+  */
+  
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -35,15 +39,12 @@
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-
-/* Public functions ----------------------------------------------------------*/
-
+#ifdef _COSMIC_
 /**
-  * @brief Dummy interrupt routine
+  * @brief  Dummy interrupt routine
   * @param  None
   * @retval None
-  */
-#ifdef _COSMIC_
+*/
 INTERRUPT_HANDLER(NonHandledInterrupt,0)
 {
     /* In order to detect unexpected events during development,
@@ -53,10 +54,10 @@ INTERRUPT_HANDLER(NonHandledInterrupt,0)
 #endif
 
 /**
-  * @brief TRAP interrupt routine
+  * @brief  TRAP interrupt routine
   * @param  None
   * @retval None
-  */
+*/
 INTERRUPT_HANDLER_TRAP(TRAP_IRQHandler)
 {
     /* In order to detect unexpected events during development,
@@ -65,7 +66,7 @@ INTERRUPT_HANDLER_TRAP(TRAP_IRQHandler)
 }
 
 /**
-  * @brief FLASH Interrupt routine.
+  * @brief  FLASH Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -77,7 +78,7 @@ INTERRUPT_HANDLER(FLASH_IRQHandler,1)
 }
 
 /**
-  * @brief Auto Wake Up Interrupt routine.
+  * @brief  Auto Wake Up Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -89,7 +90,7 @@ INTERRUPT_HANDLER(AWU_IRQHandler,4)
 }
 
 /**
-  * @brief External IT PORTB Interrupt routine.
+  * @brief  External IT PORTB Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -101,7 +102,7 @@ INTERRUPT_HANDLER(EXTIB_IRQHandler, 6)
 }
 
 /**
-  * @brief External IT PORTD Interrupt routine.
+  * @brief  External IT PORTD Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -113,7 +114,7 @@ INTERRUPT_HANDLER(EXTID_IRQHandler, 7)
 }
 
 /**
-  * @brief External IT PIN0 Interrupt routine.
+  * @brief  External IT PIN0 Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -125,7 +126,7 @@ INTERRUPT_HANDLER(EXTI0_IRQHandler, 8)
 }
 
 /**
-  * @brief External IT PIN1 Interrupt routine.
+  * @brief  External IT PIN1 Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -137,7 +138,7 @@ INTERRUPT_HANDLER(EXTI1_IRQHandler, 9)
 }
 
 /**
-  * @brief External IT PIN2 Interrupt routine.
+  * @brief  External IT PIN2 Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -149,7 +150,7 @@ INTERRUPT_HANDLER(EXTI2_IRQHandler, 10)
 }
 
 /**
-  * @brief External IT PIN3 Interrupt routine.
+  * @brief  External IT PIN3 Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -161,7 +162,7 @@ INTERRUPT_HANDLER(EXTI3_IRQHandler, 11)
 }
 
 /**
-  * @brief External IT PIN4 Interrupt routine.
+  * @brief  External IT PIN4 Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -173,7 +174,7 @@ INTERRUPT_HANDLER(EXTI4_IRQHandler, 12)
 }
 
 /**
-  * @brief External IT PIN5 Interrupt routine.
+  * @brief  External IT PIN5 Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -185,11 +186,12 @@ INTERRUPT_HANDLER(EXTI5_IRQHandler, 13)
 }
 
 /**
-  * @brief External IT PIN6 Interrupt routine.
+  * @brief  External IT PIN6 Interrupt routine.
   * @param  None
   * @retval None
   */
 INTERRUPT_HANDLER(EXTI6_IRQHandler, 14)
+
 {
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
@@ -197,7 +199,7 @@ INTERRUPT_HANDLER(EXTI6_IRQHandler, 14)
 }
 
 /**
-  * @brief External IT PIN7 Interrupt routine.
+  * @brief  External IT PIN7 Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -209,7 +211,7 @@ INTERRUPT_HANDLER(EXTI7_IRQHandler, 15)
 }
 
 /**
-  * @brief Comparator Interrupt routine.
+  * @brief  Comparator Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -221,7 +223,7 @@ INTERRUPT_HANDLER(COMP_IRQHandler, 18)
 }
 
 /**
-  * @brief Timer2 Update/Overflow/Trigger/Break Interrupt routine.
+  * @brief  Timer2 Update/Overflow/Trigger/Break Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -233,7 +235,7 @@ INTERRUPT_HANDLER(TIM2_UPD_OVF_TRG_BRK_IRQHandler, 19)
 }
 
 /**
-  * @brief Timer2 Capture/Compare Interrupt routine.
+  * @brief  Timer2 Capture/Compare Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -246,7 +248,7 @@ INTERRUPT_HANDLER(TIM2_CAP_IRQHandler, 20)
 
 
 /**
-  * @brief Timer3 Update/Overflow/Trigger/Break Interrupt routine.
+  * @brief  Timer3 Update/Overflow/Trigger/Break Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -257,7 +259,7 @@ INTERRUPT_HANDLER(TIM3_UPD_OVF_TRG_BRK_IRQHandler, 21)
     */
 }
 /**
-  * @brief Timer3 Capture/Compare Interrupt routine.
+  * @brief  Timer3 Capture/Compare Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -268,19 +270,26 @@ INTERRUPT_HANDLER(TIM3_CAP_IRQHandler, 22)
     */
 }
 /**
-  * @brief Timer4 Update/Overflow Interrupt routine.
+  * @brief  Timer4 Update/Overflow Interrupt routine.
   * @param  None
   * @retval None
   */
+extern uint32_t timertick;
 INTERRUPT_HANDLER(TIM4_UPD_OVF_IRQHandler, 25)
 {
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
     */
+  if(TIM4_GetITStatus(TIM4_IT_Update)==SET)
+  {
+    TIM4_ClearITPendingBit(TIM4_IT_Update);
+    
+  }
+  timertick++;
 }
 
 /**
-  * @brief SPI Interrupt routine.
+  * @brief  SPI Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -290,9 +299,8 @@ INTERRUPT_HANDLER(SPI_IRQHandler, 26)
        it is recommended to set a breakpoint on the following instruction.
     */
 }
-
 /**
-  * @brief USART TX Interrupt routine.
+  * @brief  USART TX Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -304,7 +312,7 @@ INTERRUPT_HANDLER(USART_TX_IRQHandler, 27)
 }
 
 /**
-  * @brief USART RX Interrupt routine.
+  * @brief  USART RX Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -315,8 +323,9 @@ INTERRUPT_HANDLER(USART_RX_IRQHandler, 28)
     */
 }
 
+
 /**
-  * @brief I2C Interrupt routine.
+  * @brief  I2C Interrupt routine.
   * @param  None
   * @retval None
   */
@@ -326,6 +335,10 @@ INTERRUPT_HANDLER(I2C_IRQHandler, 29)
        it is recommended to set a breakpoint on the following instruction.
     */
 }
+
+/**
+  * @}
+  */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 

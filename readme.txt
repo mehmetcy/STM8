@@ -1,12 +1,15 @@
-/** @page GPIO_IOToggle LEDs toggling, Button reading in polling mode
-
+/**
+  @page exampletemplate Project Example Template
+  
   @verbatim
   ******************** (C)COPYRIGHT 2014 STMicroelectronics *******************
-  * @file    AWU/GPIO_IOToggle/readme.txt 
-  * @author  MCD Application Team
-  * @version V1.2.1
-  * @date    30-September-2014
-  * @brief   Description of the AWU example
+  * @file     Project/STM8L10x_StdPeriph_Templates/readme.txt 
+  * @author   MCD Application Team
+  * @version  V1.2.1
+  * @date     30-September-2014
+  * @brief    This sub-directory contains all the user-modifiable files 
+  *           needed to create a new project linked with the STM8L10x  
+  *           Standard Peripheral Library.
   ******************************************************************************
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -23,43 +26,32 @@
   ******************************************************************************
   @endverbatim
 
-  @par Example description
+@par Project Example Template Description 
 
-  This example provides a short description of how to use the GPIO peripheral to
-  toggle Ports Pins infinitely.
-
-
-  @par Directory content
-
-  - GPIO\GPIO_IOToggle\main.c                   Main file containing the "main" function
-  - GPIO\GPIO_IOToggle\stm8l10x_conf.h          Library Configuration file
-  - GPIO\GPIO_IOToggle\stm8l10x_it.c            Interrupt routines source (not used in this example)
-  - GPIO\GPIO_IOToggle\stm8l10x_it.h            Interrupt routines declaration
+This example is used as a template that can be used as reference to build any new 
+firmware development for all STM8L10x product devices using the STM8L10x
+Standard Peripherals Library.
 
 
-  @par Hardware and Software environment
+@par Directory contents 
 
-  - This example runs on STM8L10x devices.
-  
-  - This example has been tested with STMicroelectronics STM8L101-EVAL evaluation
-    board and can be easily tailored to any other development board.
+This folder contains standard template projects for EWSTM8, STVD with Cosmic, 
+STVD with raisonance and RIDE toolchains that compile the needed STM8L10x Standard
+Peripheral's drivers plus all the user-modifiable files that are necessary to 
+create a new project. 
 
-  - STM8L1x-EVAL Set-up
-     - Three leds LD2, LD3 and LD4.
+  - Project/STM8L10x_StdPeriph_Templates/stm8l10x_conf.h    Library Configuration file
 
-     
-  @par How to use it ?
+  - Project/STM8L10x_StdPeriph_Templates/stm8l10x_it.c:     Source file containing the interrupt handlers (the 
+                                     function bodies are empty in this template).
 
-  In order to make the program work, you must do the following :
+  - Project/STM8L10x_StdPeriph_Templates/stm8l10x_it.h      Header file including all interrupt handlers prototypes.
 
-  - Copy all source files from this example folder to the template folder under
-    Project\STM8L10x_StdPeriph_Templates
-  - Open your preferred toolchain 
-  - Rebuild all files and load your image into target memory
-  - Run the example  
- 
+  - Project/STM8L10x_StdPeriph_Templates/main.c             Main program
+
+          
 @note
- - STM8L10x devices are STM8L microcontrollers with a Flash memory density up to 8 Kbytes.
-  
+ - STM8L10x devices are STM8L microcontrollers with a flash memory density up to 8 Kbytes.  
+ 
  * <h3><center>&copy; COPYRIGHT STMicroelectronics</center></h3>
  */
